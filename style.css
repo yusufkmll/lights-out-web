@@ -1,0 +1,17 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0px;
+    margin: 120px;
+    border: 1px solid black;
+    border-radius: 55px;
+    background-color: grey;
+    padding: 10px;
+    /* grid-template-columns: 5, 1fr; 5 adet 1fr'lik yer*/
+}
+
+.grid > div{
+    margin: 0px;
+    padding: 0px;
+    justify-self: center;
+}
