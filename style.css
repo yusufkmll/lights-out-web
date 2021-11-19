@@ -1,6 +1,18 @@
+@font-face {
+    font-family: 'formulaFont';
+    src: url(resources/forumla1bold.ttf);
+    font-weight: bold;
+}
+
+.header h1{
+    font-family: 'formulaFont';
+    font-weight: bold;
+    text-align: center;
+}
+
 .grid{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 0px;
     margin: 120px;
     border: 1px solid black;
