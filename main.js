@@ -12,6 +12,8 @@ let lightsOnTask;
 let reactionTimeTask;
 let ligthsOut = false;
 
+document.querySelector('#stopButton').disabled = true;
+
 function lightsOn() {
     if(lightCounter < 5) {
         lightArr[lightCounter++].src = "resources/light_on.png";
@@ -48,6 +50,9 @@ function startClick() {
 
     // Then, start the lights on task    
     lightsOnTask = setInterval(lightsOn, 1000);
+
+    document.querySelector('#stopButton').disabled = false;
+    document.querySelector('#startButton').disabled = true;
     
 }
 
@@ -62,4 +67,7 @@ function stopClick() {
     timeRef = 0;
     reactionTimeMs = 0;
     ligthsOut = false;
+
+    document.querySelector('#stopButton').disabled = true;
+    document.querySelector('#startButton').disabled = false;
 }
