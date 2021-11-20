@@ -24,7 +24,7 @@
     /* grid-template-columns: 5, 1fr; 5 adet 1fr'lik yer*/
 }
 
-.grid > div{
+.grid > img{
     margin: 0px;
     padding: 0px;
     justify-self: center;
