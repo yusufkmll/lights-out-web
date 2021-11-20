@@ -20,6 +20,7 @@
     border-radius: 55px;
     background-color: rgb(17, 17, 17);
     padding: 10px;
+    transition-duration: 1s;
     /* grid-template-columns: 5, 1fr; 5 adet 1fr'lik yer*/
 }
 
