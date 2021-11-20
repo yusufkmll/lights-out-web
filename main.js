@@ -1,5 +1,6 @@
 let lightCounter = 0;
 let reactionTimeMs = 0;
+let timeRef = 0;
 let lightArr = [
     document.querySelector('#light1'),
     document.querySelector('#light2'),
@@ -29,13 +30,8 @@ function lightsOff() {
     lightArr.forEach(light => {
         light.src = "resources/light_off.png";
     });
-    reactionTimeTask = setInterval(reactionTimeElapsed, 1);
-    //TODO start a stopwatch and keep the elapsed time until press the stop button
-}
+    timeRef = Date.now();
 
-function reactionTimeElapsed() {
-    reactionTimeMs++;
-    console.log(reactionTimeMs);
 }
 
 function startClick() {
@@ -57,12 +53,13 @@ function startClick() {
 
 function stopClick() {
     if(ligthsOut){
-        clearInterval(reactionTimeTask);
-        alert('Your time is ' + (reactionTimeMs * 0.005).toPrecision(4));
+        reactionTimeMs = Date.now() - timeRef;
+        alert('Your time is ' + (reactionTimeMs * 0.001).toPrecision(4));
     }   
     else{
         alert("JUMPSTART!");
     }
+    timeRef = 0;
     reactionTimeMs = 0;
     ligthsOut = false;
 }
